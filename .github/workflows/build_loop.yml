@@ -90,7 +90,7 @@ jobs:
         if: |
           steps.workflow-permission.outputs.has_permission == 'true' &&
           (vars.SCHEDULED_BUILD != 'false' || vars.SCHEDULED_SYNC != 'false')
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.GH_PAT }}
 
